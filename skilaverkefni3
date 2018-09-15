@@ -1,12 +1,12 @@
 first_position = int(input("Input a position between 1 and 10: "))
-#current_position = first_position
+current_position = first_position
 
 def left():
-    c = first_position - 1
+    c = current_position - 1
     return c
 
 def right():
-    c = first_position + 1
+    c = current_position + 1
     return c
 
 
@@ -18,10 +18,10 @@ while True:
     r_or_l = input("Input your choice: ")
 
     if r_or_l == "l":
-        first_position = left()
+        current_position = left()
     elif r_or_l == "r":
-        first_position = right()
+        current_position = right()
     else:
         break
 
-    print("New position is:", first_position)
+    print("New position is:", current_position)
