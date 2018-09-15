@@ -1,0 +1,25 @@
+first_position = int(input("Input a position between 1 and 10: "))  
+current_position = first_position
+
+def left(current_position):
+    current_position -= 1
+    return current_position
+
+def right(current_position):
+    current_position += 1
+    return current_position
+
+def moving_char():    
+    while True:
+        r_or_l = input("Input your choice: ")
+        if r_or_l == 'l':
+            print("New position is:",left(current_position))
+        elif r_or_l == 'r':
+            print("New position is:",right(current_position))
+        else:
+            break
+
+print("l - for moving left")
+print("r - for moving right")              
+print("Any other letter for quitting")
+moving_char()
