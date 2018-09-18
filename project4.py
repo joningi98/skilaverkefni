@@ -7,9 +7,9 @@ while True:
                 price_int = float(price)
                 numerator_int = float(numerator)
                 denominator_int = float(denominator)
-                total_value = shares * (price_int + (numerator_int / denominator_int))
-                total_value = float(total_value)
-                print("%.2f" % total_value)
+                total_value = float(shares * (price_int + (numerator_int / denominator_int)))
+                total_value = ("%.2f" % total_value)
+                print(str(round(shares)) + " shares with market price " + str(price) + " " + str(numerator) + "/" + str(denominator) + " have value $" + str(total_value))
                 break
             except ValueError:
                 print("Invalid price!")
