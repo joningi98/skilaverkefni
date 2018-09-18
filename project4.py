@@ -1,8 +1,14 @@
-keep_going = True
-
-while keep_going:
-    shares = float(input("Enter number of shares: "))
-    price, numerator, denominator = input("Enter price (dollars, numerator, denominator): ").split(' ')
+while True:
+    try:
+        shares = float(input("Enter number of shares: "))
+    except ValueError:
+        print("Invalid number!")
+        break
+    try:
+        price, numerator, denominator = input("Enter price (dollars, numerator, denominator): ").split(' ')
+    except ValueError:
+        print("Invalid price!")
+        break
     price_int = float(price)
     numerator_int = float(numerator)
     denominator_int = float(denominator)
@@ -11,9 +17,5 @@ while keep_going:
     print("%.2f" % total_value)
     resume = input("Continue: ")
   
-    if resume == 'y':
-        keep_going = True
-    else:
-        keep_going = False
-
-    
+    if resume != 'y':
+        break
